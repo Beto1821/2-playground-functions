@@ -1,13 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a && b) {
-    return(true); 
-  }
-  else {
-    return(false)
+    return true;
+  } else {
+    return false;
   }
 }
-
 
 // Desafio 2
 function calcArea() {
@@ -23,7 +21,6 @@ function splitSentence() {
 function concatName() {
   // seu código aqui
 }
-
 
 // Desafio 5
 function footballPoints() {
