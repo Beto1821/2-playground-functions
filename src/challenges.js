@@ -1,9 +1,13 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a && b) {
-    returne(); 
+    return(true); 
+  }
+  else {
+    return(false)
   }
 }
+
 
 // Desafio 2
 function calcArea() {
