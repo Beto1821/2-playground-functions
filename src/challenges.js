@@ -1,3 +1,6 @@
+/* eslint-disable no-else-return */
+/* eslint-disable object-shorthand */
+/* eslint-disable guard-for-in */
 /* eslint-disable brace-style */
 /* eslint-disable no-undef */
 /* eslint-disable sonarjs/cognitive-complexity */
@@ -77,13 +80,13 @@ function fizzBuzz(list) {
 
 function encode(frase) {
   for (i of frase) {
-      frase = frase.replace('a', '1');
-      frase = frase.replace('e', '2');
-      frase = frase.replace('i', '3');
-      frase = frase.replace('o', '4');
-      frase = frase.replace('u', '5');
+    frase = frase.replace('a', '1');
+    frase = frase.replace('e', '2');
+    frase = frase.replace('i', '3');
+    frase = frase.replace('o', '4');
+    frase = frase.replace('u', '5');
   }
-  return (frase);
+  return frase;
 }
 
 // eslint-disable-next-line complexity
@@ -95,12 +98,22 @@ function decode(frase) {
     frase = frase.replace('4', 'o');
     frase = frase.replace('5', 'u');
   }
-  return (frase);
+  return frase;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(list, name) {
+  let saida = [];
+  list.sort();
+  if (list.length === 0) {
+    return 'Vazio!';
+  } else {
+    for (i in list) {
+      saida.push({ tech: list[i], name: name });
+    }
+  }
+
+  return saida;
 }
 
 module.exports = {
