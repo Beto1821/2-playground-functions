@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(a, b) {
   return a && b;
@@ -41,8 +43,17 @@ function highestCount(list) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2';
+  }
+  // eslint-disable-next-line no-else-return
+  else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  }
+  else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
