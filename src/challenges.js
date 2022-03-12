@@ -20,12 +20,24 @@ function concatName(list) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1);
+  return wins * 3 + ties * 1;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(list) {
+  let maior = list[0];
+  let cont = 0;
+  for (i in list) {
+    if (list[i] > maior) {
+      maior = list[i];
+    }
+  }
+  for (z in list) {
+    if (list[z] === maior) {
+      cont += 1;
+    }
+  }
+  return cont;
 }
 
 // Desafio 7
