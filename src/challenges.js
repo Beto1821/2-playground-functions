@@ -1,3 +1,4 @@
+/* eslint-disable brace-style */
 /* eslint-disable no-undef */
 /* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
@@ -73,47 +74,28 @@ function fizzBuzz(list) {
 }
 
 // Desafio 9
-// eslint-disable-next-line complexity
+
 function encode(frase) {
-  for (i in frase) {
-    if (frase[i] === 'a') {
-      frase.replace('a', '1');
-    }
-    else if (frase[i] === 'e') {
-      frase.replace('e', '2');
-    }
-    else if (frase[i] === 'i') {
-      frase.replace('i', '3');
-    }
-    else if (frase[i] === 'o') {
-      frase.replace('o', '4');
-    }
-    else if (frase[i] === 'u') {
-      frase.replace('u', '5');
-    }
+  for (i of frase) {
+      frase = frase.replace('a', '1');
+      frase = frase.replace('e', '2');
+      frase = frase.replace('i', '3');
+      frase = frase.replace('o', '4');
+      frase = frase.replace('u', '5');
   }
-  return(frase);
+  return (frase);
 }
 
 // eslint-disable-next-line complexity
 function decode(frase) {
   for (i in frase) {
-    if (frase[i] === '1') {
-      frase.replace('1', 'a');
-    }
-    else if (frase[i] === '2') {
-      frase.replace('2', 'e');
-    }
-    else if (frase[i] === '3') {
-      frase.replace('3', 'i');
-    }
-    else if (frase[i] === '4') {
-      frase.replace('4', 'o');
-    }
-    else if (frase[i] === '5') {
-      frase.replace('5', 'u');
-    }
+    frase = frase.replace('1', 'a');
+    frase = frase.replace('2', 'e');
+    frase = frase.replace('3', 'i');
+    frase = frase.replace('4', 'o');
+    frase = frase.replace('5', 'u');
   }
+  return (frase);
 }
 
 // Desafio 10
