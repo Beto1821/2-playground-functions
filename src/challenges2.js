@@ -1,8 +1,3 @@
-/* eslint-disable radix */
-/* eslint-disable no-undef */
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable complexity */
-/* eslint-disable max-lines-per-function */
 // Desafio 11
 function generatePhoneNumber(list) {
   let neg = 0;
@@ -42,13 +37,15 @@ function triangleCheck(a, b, c) {
 function hydrate(frase) {
   let soma = 0;
   let numbers = frase.match(/\d+/g);
-  for (i of numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
     soma += parseInt(numbers[i]);
   }
   if (numbers.length === 1) {
     return '1 copo de água';
   } return `${soma} copos de água`;
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+
 
 module.exports = {
   generatePhoneNumber,
