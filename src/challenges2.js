@@ -30,8 +30,8 @@ function generatePhoneNumber(list) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+ return (a < b + c && b < a + c && c < a + b)
 }
 
 // Desafio 13
