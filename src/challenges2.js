@@ -1,3 +1,5 @@
+/* eslint-disable radix */
+/* eslint-disable no-undef */
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable complexity */
 /* eslint-disable max-lines-per-function */
@@ -40,7 +42,7 @@ function triangleCheck(a, b, c) {
 function hydrate(frase) {
   let soma = 0;
   let numbers = frase.match(/\d+/g);
-  for (let i = 0; i < numbers.length; i += 1) {
+  for (i of numbers) {
     soma += parseInt(numbers[i]);
   }
   if (numbers.length === 1) {
